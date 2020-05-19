@@ -2,8 +2,10 @@
 
 {% block content %}
 <a href="{% url 'pets-list-page' %}" class="btn btn-danger">Back</a>
-<h2 style="margin-top: 15px">Enter your pet's information</h2>
-<br />
+<br>
+<br>
+<h2>Enter your pet's information</h2>
+
 <form method="POST">
     <div>
         {{ form.as_p }}

@@ -26,7 +26,7 @@ class Appointment(models.Model):
     date_of_appointment = models.DateField(default=datetime.now)
     duration_minutes = models.IntegerField()
     special_instructions = models.CharField(max_length=400)
-    pet = models.ForeignKey(Pet, on_delete=models.CASCADE)
+    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, null=True)
 
     def get_absolute_url(self):
         # Returns back to the list page after a new pet is created
@@ -34,3 +34,4 @@ class Appointment(models.Model):
 
     def __str__(self):
         return self.pet.pet_name
+
